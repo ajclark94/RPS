@@ -44,16 +44,19 @@ function playRound(playerSelection, computerSelection) {
 function game() {
     let win = 0
     let lose = 0
-    let score = `Score: ${win} to ${lose}`
     for (let i = 0; i < 5; i++) {
         let result = playRound();
+        let score = `Score: ${win} to ${lose}`
         if (result.includes("win")) {
             win++;
             console.log(score)
         } else if (result.includes("lose")) {
             lose++
             console.log(score)
+        } else {
+            console.log(score)
         }
+    
         
     }
     if (win > lose) {
@@ -63,4 +66,5 @@ function game() {
     } else if (win == lose) {
         console.log("Draw")
     }
+    console.log(win, lose)
 }
