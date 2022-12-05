@@ -1,3 +1,4 @@
+//Generate Computer's Move
 function getComputerChoice() {
     const arr = ["ROCK", "PAPER", "SCISSORS"];
     const randomIndex = Math.floor(Math.random() * arr.length);
@@ -5,6 +6,7 @@ function getComputerChoice() {
     return choice;
 }
 
+//Compare User input to Computer Choice 
 function playRound(playerSelection, computerSelection) {
     playerSelection = prompt("Make Your Choice")
     computerSelection = getComputerChoice();
@@ -41,6 +43,8 @@ function playRound(playerSelection, computerSelection) {
     return result;
 }
 
+
+//Count score and determine winner of Best of 5
 function game() {
     let win = 0
     let lose = 0
